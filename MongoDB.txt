@@ -1,0 +1,141 @@
+CRUD Operations:
+~~~~~~~~~~~~~~~~
+
+-Data types:
+~~~~~~~~~~~~~
+Documents --->Json
+ Objects
+ number
+ String
+ Character
+ Boolean values
+ Arrays
+ Null
+
+Installation / Env SetUp
+
+-CRUD Operations
+~~~~~~~~~~~~~~~~~
+   
+-Architecture
+-Read/Write concepts
+-Journaling
+
+
+MongoDB:
+~~~~~~~~~~
+C:\Program Files\MongoDB\Server\5.0\bin
+
+Server: path (bin)
+~~~~~~~
+Client: SetUp ---> Connect
+~~~~~~~
+
+Server (MongoDB)   <----> Client (application designed on any languages)
+~~~~~~~~~~~~~~~~~
+Server
+    -MongoDB Database server ---> MongoDB ---> deamon server
+    -DB path    ---> Database path  ---> MongoDB stores data ---> Database/ collection
+                ---> default   ---> c:\data\db (windows)
+                               --->/data/db
+
+     - port   ---> network path
+              --->default    ---->27017
+
+     db instance ---->Server and client connected with each other (port)
+                 ---->Server  (30000) ----> Clients
+                 db instance ---->server (30000) --->Not feasible
+
+                 No 2 servers can have sameport number
+                        60000 ports (20000 - 60000)
+
+Client (MongoDB): ----> MongoDB Internal client (Shell ---> Powered by Java)
+~~~~~~~~~~~~~~~~~   ---->MongoDB
+
+Interfaces :
+~~~~~~~~~~~~~
+CLI --->Command line tool
+GUI --->Graphical user Interfaces(Compass / Robo 3t / NoSQLClient / )
+
+
+dbpath    --->data
+port     -----> 300000
+logpath   --->logos\crud.logos
+logappend
+
+Mongod  --port 30000 --dbpath data
+ 
+ &  ---> start / b
+start / b  Mongod --dbpath port 30000 -logpath logs\crud.log --logappend
+
+security --->Auth & Autherization
+username/password x509 LADP/KERBEROS  
+
+
+mongo --port 30000
+
+127.0.0.1 ---->localhost
+
+
+******CRUD Operations:
+     ~~~~~~~~~~~~~~~~~
+    (1) create 
+        server    --->Mongod
+        Database
+        collection
+        Documents
+
+    (2) Read
+    (3)Update
+    (4)Delete
+
+MongoDB URL:
+~~~~~~~~~~~~
+mongodb+srv://sireesha:<password>@cluster0.38gnkly.mongodb.net/
+
+
+ways to connect node app with mongodb:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(1) using the mongoose packages
+(2) using the mongodb packages
+
+CRUD Operations:
+~~~~~~~~~~~~~~~~~~~
+>show databases
+>use Siree
+> show collections
+> db.students.find()
+> db.students.insertOne({name: "Siri", class: 14})
+> db.students.find().pretty()
+> db.students.update({name: "Siri"}, {$set: { class:15 }})
+> db.students.remove({name: "Siri"})
+
+
+
+///Sending the emails through NodeJS Application:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->Receiving requests
+-->sending responses
+
+-->emails provider : to send the emails:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   -->sendgrid
+   -->Mailgun
+   -->nodemailer
+
+
+   -->Installation the mail provider with the secert key
+         --->Signup on the mail provider website
+             -->Copy the secret key
+      -->create a transport layer
+      -->Execute the send functions
+
+      https://github.com/abhisheksaini333/node-bulk-email-utility
+
+
+      //APIs:
+      ~~~~~~
+      -->create APIs
+         -->MVC 
+            -->Models: Interact with DB
+            
